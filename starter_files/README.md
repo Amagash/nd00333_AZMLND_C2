@@ -27,13 +27,19 @@ Step 2: Automated ML Experiment
    ![img_7](img/img_7.PNG)
    3. Create a new automated ML run using the bank marketing dataset
    ![img_3](img/img_3.PNG)
-   4. Once the AutoML run is done, you can see the results
-   ![img_4](img/img_4.PNG)
-3. Chose the best model. In this case, we chose the VotingEnsemble model
-   ![img_6](img/img_6.PNG)
-4. Deploy the best model.
-   ![img_8](img/img_8.PNG)
+3. Deploy the Best Model. In this case, we chose the VotingEnsemble model with 91.81% accuracy.
 
+   ![img_6](img/img_6.PNG)
+
+   ![img_8](img/img_8.PNG)
+4. Enable Application Insights
+   1. Install Azure python SDK : `pip install az`
+   2. Create a new virtual env with Python3
+   3. Enable Application Insights in the `logs.py` file: `service.update(enable_app_insights=True)`
+   4. Application Insight enabled
+   ![img_9](img/img_9.PNG)
+   5. Check the logs
+   ![img_10](img/img_10.PNG)
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 
