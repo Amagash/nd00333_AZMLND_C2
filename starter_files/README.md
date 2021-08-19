@@ -44,6 +44,10 @@ Step 2: Automated ML Experiment
    1. Download the swagger.json file in `swagger/swagger.json`
    2. Run the swagger.sh and serve
    ![img_11](img/img_11.PNG)
+6. Consume Model Endpoints
+   1. Modifying the `scoring_uri` and the `key` in the `endpoints.py` file.
+   2. Check if the script runs successfuly against the API producing the right JSON output `{"result": ["yes", "no"]}`
+   ![img_13](img/img_13.PNG)
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 
