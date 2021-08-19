@@ -97,15 +97,15 @@ az ml workspace share -w demo-ml -g NetworkWatcherRG --user {objectId} --role ow
    1. Upload the Notebook and update variables.
    2. Create the pipeline
    ![img_16](img/img_16.PNG)
-   1. Pipeline endpoint
+   3. Pipeline endpoint
    ![img_18](img/img_18.PNG)
-   1. Bankmarketing dataset
+   4. Bankmarketing dataset
    ![img_19](img/img_19.PNG)
-   1. Published pipeline overview
+   5. Published pipeline overview
    ![img_20](img/img_20.PNG)
-   1. RunDetails Widget
+   6. RunDetails Widget
    ![img_21](img/img_21.PNG)
-   1. The run
+   7. The run
    ![img_22](img/img_22.png)
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
