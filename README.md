@@ -115,7 +115,7 @@ Here is a screen recording of the project in action: https://youtu.be/9lau8phreI
 
 One flag was raised during the AutoML run as shown in the image below.
 
-![img_24](img/img_24.png)
+![img_24](img/img_24.PNG)
 
 It is noticed that there are imbalanced classes in the input. The algorithms used by automated ML detect imbalance when the number of samples in the minority class is equal to or fewer than 20% of the number of samples in the majority class, where minority class refers to the one with fewest samples and majority class refers to the one with most samples.
 
