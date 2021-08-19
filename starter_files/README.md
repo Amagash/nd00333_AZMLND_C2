@@ -1,19 +1,43 @@
-*NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
-
-
 # Operationalize Machine Learning
-*TODO:* Write an overview to your project.
 In this project, we will continue to work with the Bank Marketing datase. We will use Azure to configure a cloud-based machine learning production model, deploy it, and consume it. We will also create, publish, and consume a pipeline. In the end, a screencast video will showcase the end-to-end process.
 ## Architectural Diagram
-*TODO*: Provide an architectual diagram of the project and give an introduction of each step. An architectural diagram is an image that helps visualize the flow of operations from start to finish. In this case, it has to be related to the completed project, with its various stages that are critical to the overall flow. For example, one stage for managing models could be "using Automated ML to determine the best model". 
 
-Step 1: Authentication
-This step is required if the project is hosted on a personal Azure account.
+![img_23](img/img_23.PNG)
 
-Step 2: Automated ML Experiment
+- Step 1: Authentication
+This step is required if the project is hosted on a personal Azure account. We will use the Azure Machine Learning Extension to interact with Azure Machine Learning Studio.
+
+- Step 2: Automated ML Experiment
+In this step, we will create an experiment using Automated ML, configure a compute cluster, and use that cluster to run the experiment.
+
+- Step 3: Deploy the best model
+Once the experiment run completes, a summary of all the models and their metrics are shown, including explanations. The Best Model will be shown in the Details tab and we will select it to deploy. Deploying the Best Model will allow to interact with the HTTP API service and interact with the model by sending data over POST requests.
+
+- Step 4: Enable logging
+Once the Best Model is deployed, we have to enable Application Insights and retrieve logs.
+
+- Step 5: Swagger Documentation
+In this step, we will consume the deployed model using Swagger using the provided Swagger JSON file for deployed models from Azure.
+
+- Step 6: Consume model endpoints
+Once the model is deployed, we can use the endpoint.py script provided to interact with the trained model.
+
+- Step 7: Create and Publish a Pipeline
+For this part of the project, we will use the Jupyter Notebook provided in the starter files. All in one Notebook, we will: 
+  1. Create an Experiment in an existing Workspace. 
+  2. Create or Attach existing AmlCompute to a workspace. 
+  3. Define data loading in a TabularDataset. 
+  4. Configure AutoML using AutoMLConfig. 
+  5. Use AutoMLStep.
+  6. Train the model using AmlCompute.
+  7. Explore the results. 
+  8. Test the best fitted model.
+  9. Publish the pipeline and run from REST endpoint.
+
+- Step 8: Documentation
+  The Screencast of the entire process is available [here](#screen-recording).
 
 ## Key Steps
-*TODO*: Write a short discription of the key steps. Remeber to include all the screenshots required to demonstrate key steps. 
 
 1. Authentication to the Azure account. Run the following command 
    
@@ -69,6 +93,3 @@ Step 2: Automated ML Experiment
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 
-## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
- test
