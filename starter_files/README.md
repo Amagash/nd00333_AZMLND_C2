@@ -43,6 +43,7 @@ Step 2: Automated ML Experiment
 5. Swagger Documentation
    1. Download the swagger.json file in `swagger/swagger.json`
    2. Run the swagger.sh and serve
+   ![img_11](img/img_11.PNG)
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 
