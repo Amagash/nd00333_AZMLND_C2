@@ -39,56 +39,72 @@ For this part of the project, we will use the Jupyter Notebook provided in the s
 
 ## Key Steps
 
-1. Authentication to the Azure account. Run the following command 
+1. Authentication to the Azure account. The following steps were followed:
+```bash
+az login
+az extension add -n azure-cli-ml
+
+#create a Service Principal in azure active directory named {ml-auth}
+
+az ad sp create-for-rbac --sdk-auth --name {ml-auth}
+
+#from the previous run, copy the clientId and run 
+
+az ad sp show --id {clientId}
+
+#from the previous run, copy the objectId and run (-w is the machine learning workspace and -g is the resource group )
+
+az ml workspace share -w demo-ml -g NetworkWatcherRG --user {objectId} --role owner
+```
    
 ![img_1](img/img_1.PNG)
 
-2. Automated ML Experiment
+1. Automated ML Experiment
    1. Create a new compute cluster
    ![img_2](img/img_2.PNG)
-   2. Upload the telemarketing data.
+   1. Upload the telemarketing data.
    ![img_7](img/img_7.PNG)
-   3. Create a new automated ML run using the bank marketing dataset
+   1. Create a new automated ML run using the bank marketing dataset
    ![img_3](img/img_3.PNG)
-3. Deploy the Best Model. In this case, we chose the VotingEnsemble model with 91.81% accuracy.
+2. Deploy the Best Model. In this case, we chose the VotingEnsemble model with 91.81% accuracy.
 
    ![img_6](img/img_6.PNG)
 
    ![img_8](img/img_8.PNG)
-4. Enable Application Insights
+3. Enable Application Insights
    1. Install Azure python SDK : `pip install az`
    2. Create a new virtual env with Python3
    3. Enable Application Insights in the `logs.py` file: `service.update(enable_app_insights=True)`
    4. Application Insight enabled
    ![img_9](img/img_9.PNG)
-   5. Check the logs
+   1. Check the logs
    ![img_10](img/img_10.PNG)
-5. Swagger Documentation
+4. Swagger Documentation
    1. Download the swagger.json file in `swagger/swagger.json`
    2. Run the swagger.sh and serve
    ![img_11](img/img_11.PNG)
-6. Consume Model Endpoints
+5. Consume Model Endpoints
    1. Modify the `scoring_uri` and the `key` in the `endpoints.py` file.
    2. Check if the script runs successfuly against the API producing the right JSON output `{"result": ["yes", "no"]}`
    ![img_13](img/img_13.PNG)
-   3. Modify the `scoring_uri` and the `key` in the `benchmark.sh` file and run the benchmark.
+   1. Modify the `scoring_uri` and the `key` in the `benchmark.sh` file and run the benchmark.
    ![img_15](img/img_15.PNG)
    ...
    ![img_14](img/img_14.PNG)
    Here the benchmark is acceptable because there are 0 failed requests, and each request is very fast with only 3.31 requests per second.
-7. Create, Publish and Consume a Pipeline
+6. Create, Publish and Consume a Pipeline
    1. Upload the Notebook and update variables.
    2. Create the pipeline
    ![img_16](img/img_16.PNG)
-   3. Pipeline endpoint
+   1. Pipeline endpoint
    ![img_18](img/img_18.PNG)
-   4. Bankmarketing dataset
+   1. Bankmarketing dataset
    ![img_19](img/img_19.PNG)
-   5. Published pipeline overview
+   1. Published pipeline overview
    ![img_20](img/img_20.PNG)
-   6. RunDetails Widget
+   1. RunDetails Widget
    ![img_21](img/img_21.PNG)
-   7. The run
+   1. The run
    ![img_22](img/img_22.png)
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
