@@ -91,8 +91,9 @@ az ml workspace share -w demo-ml -g NetworkWatcherRG --user {objectId} --role ow
    ![img_15](img/img_15.PNG)
    ...
    ![img_14](img/img_14.PNG)
+   
    Here the benchmark is acceptable because there are 0 failed requests, and each request is very fast with only 3.31 requests per second.
-6. Create, Publish and Consume a Pipeline
+6. Create and Publish Pipeline
    1. Upload the Notebook and update variables.
    2. Create the pipeline
    ![img_16](img/img_16.PNG)
