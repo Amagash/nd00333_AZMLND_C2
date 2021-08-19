@@ -2,7 +2,7 @@
 In this project, we will continue to work with the Bank Marketing datase. We will use Azure to configure a cloud-based machine learning production model, deploy it, and consume it. We will also create, publish, and consume a pipeline. In the end, a screencast video will showcase the end-to-end process.
 ## Architectural Diagram
 
-![img_23](img/img_23.PNG)
+![img_23](img/img_23.png)
 
 - Step 1: Authentication
 This step is required if the project is hosted on a personal Azure account. We will use the Azure Machine Learning Extension to interact with Azure Machine Learning Studio.
@@ -89,7 +89,7 @@ For this part of the project, we will use the Jupyter Notebook provided in the s
    6. RunDetails Widget
    ![img_21](img/img_21.PNG)
    7. The run
-   ![img_22](img/img_22.PNG)
+   ![img_22](img/img_22.png)
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 
