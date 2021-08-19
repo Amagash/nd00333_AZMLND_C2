@@ -39,7 +39,7 @@ For this part of the project, we will use the Jupyter Notebook provided in the s
 
 ## Key Steps
 
-1. Authentication to the Azure account. The following steps were followed:
+1. Authentication to the Azure account. The commands were run:
 ```bash
 az login
 az extension add -n azure-cli-ml
@@ -54,7 +54,7 @@ az ad sp show --id {clientId}
 
 #from the previous run, copy the objectId and run (-w is the machine learning workspace and -g is the resource group )
 
-az ml workspace share -w demo-ml -g NetworkWatcherRG --user {objectId} --role owner
+az ml workspace share -w udacity-ml-workspace -g NetworkWatcherRG --user {objectId} --role owner
 ```
    
 ![img_1](img/img_1.PNG)
@@ -108,5 +108,6 @@ az ml workspace share -w demo-ml -g NetworkWatcherRG --user {objectId} --role ow
    7. The run
    ![img_22](img/img_22.png)
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
+
+Here is a screen recording of the project in action: https://youtu.be/9lau8phreIw
 
