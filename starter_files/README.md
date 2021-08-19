@@ -45,9 +45,14 @@ Step 2: Automated ML Experiment
    2. Run the swagger.sh and serve
    ![img_11](img/img_11.PNG)
 6. Consume Model Endpoints
-   1. Modifying the `scoring_uri` and the `key` in the `endpoints.py` file.
+   1. Modify the `scoring_uri` and the `key` in the `endpoints.py` file.
    2. Check if the script runs successfuly against the API producing the right JSON output `{"result": ["yes", "no"]}`
    ![img_13](img/img_13.PNG)
+   3. Modify the `scoring_uri` and the `key` in the `benchmark.sh` file and run the benchmark.
+   ![img_15](img/img_15.PNG)
+   ...
+   ![img_14](img/img_14.PNG)
+   Here the benchmark is acceptable because there are 0 failed requests, and each request is very fast with only 3.31 requests per second.
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 
